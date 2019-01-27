@@ -1,5 +1,5 @@
 import React from 'react';
-import { MDBBtn ,MDBCol,  MDBRow, MDBFooter,MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBIcon, MDBContainer } from 'mdbreact';
+import { MDBBtn ,MDBProgress ,MDBCol,  MDBRow, MDBFooter,MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBIcon, MDBContainer } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './app.css';
 class Burgeramir extends React.Component {
@@ -72,8 +72,9 @@ class Burgeramir extends React.Component {
           </header>
         </Router>
         <MDBContainer style={container} className="text-center mt-5">
-          <h2>This Navbar isn't fixed</h2>
+          
           <a>When you scroll down it will disappear</a>
+          
         </MDBContainer>
         <MDBFooter color="elegant-color-dark" className="font-small pt-4 mt-4">
       <MDBContainer fluid className="text-center text-md-left">
