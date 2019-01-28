@@ -16,7 +16,7 @@ class Burgeramir extends React.Component {
       collapse: !this.state.collapse,
     });
   }
-
+ 
   render() {
     const container = { height: 1300 }
     return (
@@ -72,8 +72,12 @@ class Burgeramir extends React.Component {
           </header>
         </Router>
         <MDBContainer style={container} className="text-center mt-5">
-          
-          <a>When you scroll down it will disappear</a>
+        <MDBRow >
+          <MDBCol>
+            <img src="./D:\food.me-react.JS\src\img\cola.png/cola.jpg" className="img-fluid" alt="" />
+          </MDBCol>
+        </MDBRow>
+          console.log ("hani lena ")
           
         </MDBContainer>
         <MDBFooter color="elegant-color-dark" className="font-small pt-4 mt-4">
