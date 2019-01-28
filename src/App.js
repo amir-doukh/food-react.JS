@@ -77,7 +77,7 @@ class Burgeramir extends React.Component {
             <img src="./D:\food.me-react.JS\src\img\cola.png/cola.jpg" className="img-fluid" alt="" />
           </MDBCol>
         </MDBRow>
-          console.log ("hani lena ")
+          
           
         </MDBContainer>
         <MDBFooter color="elegant-color-dark" className="font-small pt-4 mt-4">
