@@ -1,7 +1,13 @@
 import React from 'react';
-import { MDBBtn ,MDBProgress ,MDBCol,  MDBRow, MDBFooter,MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBIcon, MDBContainer } from 'mdbreact';
+import { MDBBtn ,MDBAnimation  ,MDBCol,  MDBRow, MDBFooter,MDBNavbar, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBIcon, MDBContainer } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './app.css';
+import cola from './img/cola.png';
+import breakfast from './img/breakfast.png';
+import burger from './img/burger.png';
+import frite from './img/frite.png';
+import glace from './img/glace.png';
+import menu from './img/menu.png';
 class Burgeramir extends React.Component {
   constructor(props) {
     super(props);
@@ -73,8 +79,33 @@ class Burgeramir extends React.Component {
         </Router>
         <MDBContainer style={container} className="text-center mt-5">
         <MDBRow >
-          <MDBCol>
-            <img src="./D:\food.me-react.JS\src\img\cola.png/cola.jpg" className="img-fluid" alt="" />
+        <MDBCol lg="4" md="4" className="mb-4">
+        <MDBAnimation type="bounce" infinite>
+          <img src={burger } alt="burger"  />
+          </MDBAnimation>
+          <figcaption > burger </figcaption>
+          </MDBCol>
+          <MDBCol lg="4" md="4" className="mb-4">
+          <img src={menu} alt="menu"  />
+          <figcaption > menu </figcaption>
+          </MDBCol>
+          <MDBCol  lg="4" md="4" className="mb-4">
+            <img src={frite} alt=" "  />
+            <figcaption > frite </figcaption>
+          </MDBCol>
+        </MDBRow>
+        <MDBRow >
+        <MDBCol lg="4" md="4" className="mb-4">
+          <img src={breakfast} alt="breakfast"  />
+          <figcaption > breakfast </figcaption>
+          </MDBCol>
+          <MDBCol lg="4" md="4" className="mb-4">
+          <img src={glace}  alt="" />
+          <figcaption > glace </figcaption>
+          </MDBCol>
+          <MDBCol  lg="4" md="4" className="mb-4">
+            <img src={cola}  alt="" />
+            <figcaption > cola </figcaption>
           </MDBCol>
         </MDBRow>
           
