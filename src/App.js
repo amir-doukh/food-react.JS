@@ -8,6 +8,7 @@ import burger from './img/burger.png';
 import frite from './img/frite.png';
 import glace from './img/glace.png';
 import menu from './img/menu.png';
+
 class Burgeramir extends React.Component {
   constructor(props) {
     super(props);
@@ -86,7 +87,7 @@ class Burgeramir extends React.Component {
           <figcaption > burger </figcaption>
           </MDBCol>
           <MDBCol lg="4" md="4" className="mb-4">
-          <img src={menu} alt="menu"  />
+          <img  id ="im" src={menu} alt="menu"  />
           <figcaption > menu </figcaption>
           </MDBCol>
           <MDBCol  lg="4" md="4" className="mb-4">

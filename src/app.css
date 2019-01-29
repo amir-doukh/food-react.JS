@@ -1,3 +1,9 @@
 #share,#titre, #bar{
     font-weight: bold
+
+}
+#im{
+    transform: scale(1.4);
+    z-index: 5;
+    position:relative
 }
