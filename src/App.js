@@ -25,7 +25,7 @@ class Burgeramir extends React.Component {
   }
   onHover() {
     console.log("ok")
-    //this.setState(console.log("ok"));
+    this.setState();
 }
   render() {
     const container = { height: 1300 }
