@@ -17,29 +17,25 @@ class Burgeramir extends React.Component {
     };
     this.onClick = this.onClick.bind(this);
   }
-
+  
   onClick() {
     this.setState({
       collapse: !this.state.collapse,
     });
   }
- 
+  onHover() {
+    console.log("ok")
+    //this.setState(console.log("ok"));
+}
   render() {
     const container = { height: 1300 }
+   
     return (
       <div>
         <Router>
           <header>
             <MDBNavbar color="warning-color-dark"  className="order-12" dark expand="md">
                <MDBNavLink to="/">
-            
-              <MDBBtn tag="a" size="lg" floating gradient="purple">
-              <img
-                  src="./img/logo2.jpg"
-                  alt=""
-                  className="rounded-circle img-fluid"
-                />
-      </MDBBtn>
       </MDBNavLink>
               <MDBNavbarToggler onClick={this.onClick} />
               <MDBCollapse isOpen={this.state.collapse} navbar>
@@ -82,12 +78,12 @@ class Burgeramir extends React.Component {
         <MDBRow >
         <MDBCol lg="4" md="4" className="mb-4">
         <MDBAnimation type="bounce" infinite>
-          <img src={burger } alt="burger"  />
+          <img src={burger } alt="burger" onMouseOver={this.onHover}  />
           </MDBAnimation>
           <figcaption > burger </figcaption>
           </MDBCol>
           <MDBCol lg="4" md="4" className="mb-4">
-          <img  id ="im" src={menu} alt="menu"  />
+          <img  id ="im" src={menu} alt="menu" onMouseOver={this.onHover} />
           <figcaption > menu </figcaption>
           </MDBCol>
           <MDBCol  lg="4" md="4" className="mb-4">
