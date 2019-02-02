@@ -14,7 +14,9 @@ class Burgeramir extends React.Component {
     super(props);
     this.state = {
       collapse: false,
+      
     };
+    
     this.onClick = this.onClick.bind(this);
   }
   
@@ -24,9 +26,16 @@ class Burgeramir extends React.Component {
     });
   }
   onHover() {
-    console.log("ok")
-    this.setState();
-}
+    console.log("ok" )
+    //val=style.id= im; 
+    const newstyle = {
+      transform: 'scale(1.4)',
+      //z-index: '5';
+      position:'relative',
+    };
+
+  }
+ 
   render() {
     const container = { height: 1300 }
    
@@ -77,13 +86,11 @@ class Burgeramir extends React.Component {
         <MDBContainer style={container} className="text-center mt-5">
         <MDBRow >
         <MDBCol lg="4" md="4" className="mb-4">
-        <MDBAnimation type="bounce" infinite>
-          <img src={burger } alt="burger" onMouseOver={this.onHover}  />
-          </MDBAnimation>
+          <img src={burger } alt="burger"   style={this.onHover.newstyle} />
           <figcaption > burger </figcaption>
           </MDBCol>
           <MDBCol lg="4" md="4" className="mb-4">
-          <img  id ="im" src={menu} alt="menu" onMouseOver={this.onHover} />
+          <img   src={menu} alt="menu" onMouseOver={this.onHover} />
           <figcaption > menu </figcaption>
           </MDBCol>
           <MDBCol  lg="4" md="4" className="mb-4">
