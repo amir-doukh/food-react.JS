@@ -58,11 +58,7 @@ class Burgeramir extends React.Component {
    
     return (
       <div>
-        <Router>
-          <header>
-            
-          </header>
-        </Router>
+            <navbar/>
         <MDBContainer style={container} className="text-center mt-5">
         <MDBRow >
         <MDBCol lg="4" md="4" className="mb-4">
