@@ -1,6 +1,5 @@
 import React from 'react';
-import navbar from'./composants/navbar';
-import { MDBCol,  MDBRow, MDBFooter,, MDBIcon, MDBContainer } from 'mdbreact';
+import { MDBCol,  MDBRow, MDBFooter,MDBNavbar, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBIcon, MDBContainer } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './app.css';
 import cola from './img/cola.png';
@@ -20,6 +19,9 @@ class Burgeramir extends React.Component {
     };
 
     this.onClick = this.onClick.bind(this);
+    this.onHover=this.onHover.bind(this);
+    this.onmouseOver=this.onmouseOver.bind(this);
+    this.onmouseout=this.onmouseOver.bind(this);
   }
   
   onClick() {
@@ -27,38 +29,82 @@ class Burgeramir extends React.Component {
       collapse: !this.state.collapse,
     });
   }
+  
   onHover() {
-    console.log("ok" )
-    //val=style.id= im; 
-    const newstyle = {
-      transform: 'scale(1.4)',
-      //z-index: '5';
-      position:'relative',
-    };
-
+    if(this.state.hovered ){
+      console.log("havred true");
+     return{
+       transform: 'scale(1.4)',
+       //z-index: '5';
+       position:'relative',
+     }
+   }else {
+     console.log("havred false")
+     return{
+       transform: 'scale(1)',
+       //z-index: '5';
+       position:'relative',
+     }
+   }
+   }
+  onmouseOver(){
+   console.log("mouse over");
+    this.setState.hovered="true";
+   console.log(this.state.hovered)
   }
-  onover(){
-    console.log("imchi 3ad");
-   
-   this.setState.hovered=true;
+  onmouseout(){
+    this.setState.hovered=false;
+    console.log("mouse out")
   }
-  componentDidMount() {
-    this.setState({
-      hovered: false
-     })
-  }
-  onout(){
-    this.componentDidMount();
-    
-    console.log(this.setState.hovered);
-  }
+ 
  
   render() {
     const container = { height: 1300 }
    
     return (
       <div>
-            <navbar/>
+        <Router>
+          <header>
+            <MDBNavbar color="warning-color-dark"  className="order-12" dark expand="md">
+               <MDBNavLink to="/">
+      </MDBNavLink>
+              <MDBNavbarToggler onClick={this.onClick} />
+              <MDBCollapse isOpen={this.state.collapse} navbar>
+                <MDBNavbarNav id="bar" left>
+                  <MDBNavItem active>
+                    <MDBNavLink to="#">MENU</MDBNavLink>
+                  </MDBNavItem>
+                  <MDBNavItem>
+                    <MDBNavLink to="#">LOCATIOR</MDBNavLink>
+                  </MDBNavItem>
+                  <MDBNavItem>
+                    <MDBNavLink to="#">DELIVERY</MDBNavLink>
+                  </MDBNavItem>
+                  <MDBNavItem>
+                    <MDBNavLink to="#">OFFERS</MDBNavLink>
+                  </MDBNavItem>
+                  <MDBNavItem>
+                    <MDBNavLink to="#">NEW PRODUCTS</MDBNavLink>
+                  </MDBNavItem>
+                  <MDBNavItem>
+                    <MDBNavLink to="#">CONTACT US</MDBNavLink>
+                  </MDBNavItem>
+                </MDBNavbarNav>
+                <MDBNavbarNav right>
+                  <MDBNavItem>
+                    <MDBNavLink to="#"><MDBIcon fab icon="instagram " /></MDBNavLink>
+                  </MDBNavItem>
+                  <MDBNavItem>
+                    <MDBNavLink to="#"><MDBIcon fab icon="twitter" /></MDBNavLink>
+                  </MDBNavItem>
+                  <MDBNavItem>
+                    <MDBNavLink to="#"><MDBIcon fab icon="facebook-f" /></MDBNavLink>
+                  </MDBNavItem>
+                </MDBNavbarNav>
+              </MDBCollapse>
+            </MDBNavbar>
+          </header>
+        </Router>
         <MDBContainer style={container} className="text-center mt-5">
         <MDBRow >
         <MDBCol lg="4" md="4" className="mb-4">
@@ -66,7 +112,7 @@ class Burgeramir extends React.Component {
           <figcaption > burger </figcaption>
           </MDBCol>
           <MDBCol lg="4" md="4" className="mb-4">
-          <img   src={menu} alt="menu" onMouseOver={this.onHover} onMouseOut={this.componentDidMount}  />
+          <img   src={menu} alt="menu" onMouseOver={this.onmouseOver} onMouseOut={this.onmouseout} style={this.onHover()}/>
           <figcaption > menu </figcaption>
           </MDBCol>
           <MDBCol  lg="4" md="4" className="mb-4">
